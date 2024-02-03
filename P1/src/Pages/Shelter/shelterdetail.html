@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<!-- CSC309 P1
+  University of Toronto -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC309 P1 - Shelter Detail Page</title>
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Nav bar links -->
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSC309 P1 - Shelter Detail Page</title>
+        <link rel="stylesheet" href="../../CSS/style.css" />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+      </head>
+
+      <body>
+        <div class="container-fluid page-container bg-light">
+          <header id="header">
+            <nav class="navbar navbar-expand-sm headercolour">
+              <div class="container">
+                <a class="navbar-brand" href="../Index/index_lgn.html">
+                  <img
+                    src="../../Pictures/Icons/pawprint.png"
+                    width="30"
+                    height="30"
+                    class="d-inline-block align-top me-2"
+                    alt=""
+                  />
+                  PetFinder</a
+                >
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav"></ul>
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown mt-1">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="../../Pictures/Icons/notification.png"
+                          width="35"
+                          height="35"
+                          class="d-inline-block ms-3"
+                          alt=""
+                        />
+                      </a>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="../Applications/petapplication.html"
+                            >You've recieved a message!</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown mt-1">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="../../Pictures/Icons/profile.png"
+                          width="40"
+                          height="40"
+                          class="d-inline-block p-0 m-0 ms-3"
+                          alt=""
+                        />
+                      </a>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="../Account/accountupdatepageuser.html"
+                            >Account</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="../Pets/petcreation.html"
+                            >List your Pet</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item" href="index.html">Logout</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <main>
+            <div class="jumbotron text-center mb-4 mt-3">
+              <h1 class="display-4">Welcome to [Shelter Name]!</h1>
+              <p class="lead">[Shelter Mission Statement]</p>
+            </div>
+
+            <div class="container pb-5">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <h2>Contact Information</h2>
+                  <p>Email: example@example.com</p>
+                  <p>Phone: (123) 456-7890</p>
+                  <div class="card" style="width: 100%">
+                    <img
+                      src="../../Pictures/dog1.jpg"
+                      class="card-img-top img-fluid"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Reunited and Rehomed(Blog title)
+                      </h5>
+                      <p class="card-text">
+                        A Long Road to Their Forever Home When we send animals
+                        home, we never really expect to see them again except in
+                        photos of their happy families. That was not the case
+                        for feline siblings Rome and Mary Sanderson. Rome and
+                        Mary Sanderson were adopted together from EHS last
+                        November by a couple and, after
+                      </p>
+                      <a href="https://example.com/blog" class="btn btn-info"
+                        >Learn more by visiting our Blog</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <h2>Location</h2>
+                  <p>1234 Pet Street</p>
+                  <p>City, State, ZIP</p>
+                  <div
+                    class="map-container mt-3"
+                    style="
+                      position: relative;
+                      overflow: hidden;
+                      padding-top: 56.25%;
+                    "
+                  >
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.268530319784!2d-79.39858112358145!3d43.66338477110167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34b8f331fd9b%3A0x8d1d9bb6765a76f7!2sUniversity%20of%20Toronto!5e0!3m2!1sen!2sca!4v1696181691847!5m2!1sen!2sca"
+                      style="
+                        border: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                      "
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="mb-4">Find Pets to Adopt</h2>
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-info" type="submit">
+                  Show all 792 pets
+                </button>
+              </form>
+
+              <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <img
+                      class="card-img-top img-fluid"
+                      src="../../Pictures/cat1_fixed.jpg"
+                      alt="Pet Image"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Pet Name</h5>
+                      <p class="card-text">Click to learn more</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <img
+                      class="card-img-top"
+                      src="../../Pictures/hedgehog.jpg"
+                      alt="Pet Image"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Pet Name</h5>
+                      <p class="card-text">Click to learn more</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <img
+                      class="card-img-top"
+                      src="../../Pictures/dog3.jpg"
+                      alt="Pet Image"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Pet Name</h5>
+                      <p class="card-text">Click to learn more</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <img
+                      class="card-img-top"
+                      src="../../Pictures/cat2.jpg"
+                      alt="Pet Image"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Pet Name</h5>
+                      <p class="card-text">Click to learn more</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <img
+                      class="card-img-top"
+                      src="../../Pictures/dog1.jpg"
+                      alt="Pet Image"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Pet Name</h5>
+                      <p class="card-text">Click to learn more</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <img
+                      class="card-img-top"
+                      src="../../Pictures/dog2.jpg"
+                      alt="Pet Image"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Pet Name</h5>
+                      <p class="card-text">Click to learn more</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Additional pet cards copy and paste, change up the image  -->
+
+            <!-- Shelter reviews -->
+            <div></div>
+          </main>
+          <div class="bg-dark text-white py-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                  <h5>Quick Links</h5>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="../Index/index_lgn.html" class="text-white"
+                        >Index after Login</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Index/index.html" class="text-white"
+                        >Index
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../Login/login.html" class="text-white"
+                        >Login
+                      </a>
+                    </li>
+                    <li>
+                      <a href="../Login/login_err.html" class="text-white"
+                        >Login Error</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="../Login/signup.html" class="text-white"
+                        >Sign Up</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Login/signup_err.html" class="text-white"
+                        >Sign Up Error</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Pets/petcreation.html" class="text-white"
+                        >Pets Creation</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Pets/petdetail.html" class="text-white"
+                        >Pets Detail</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Pets/petupdate.html" class="text-white"
+                        >Pets Update</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        href="../Search/search_filter_cats.html"
+                        class="text-white"
+                        >Search filter cats</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Search/search.html" class="text-white"
+                        >Search</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Search/search_sort.html" class="text-white"
+                        >Search Sort</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Shelter/shelterdetail.html" class="text-white"
+                        >Shelter Detail</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../Shelter/sheltermanagement.html"
+                        class="text-white"
+                        >Shelter Management</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        href="../Account/accountupdatepageshelter.html"
+                        class="text-white"
+                        >Update Shelter</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../Account/accountupdatepageuser.html"
+                        class="text-white"
+                        >Update User</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../Applications/petadoption.html"
+                        class="text-white"
+                        >Pet Adoption</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../Applications/petapplication.html"
+                        class="text-white"
+                        >Pet Application</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <h5>Contact Us</h5>
+                  <p>
+                    <i class="fas fa-phone-alt"></i> +1 647-923-3497 <br />
+                    <i class="fas fa-envelope"></i> support@petadoption.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="text-center text-lg-start bg-dark text-light footer">
+            <div class="text-center p-3">
+              Spencer Perkins, Nicholas Au, Adrian Hui
+            </div>
+            <!-- Copyright -->
+          </footer>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>

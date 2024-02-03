@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!--
+  CSC309 P1
+  University of Toronto
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC309 P1 - Search Page</title>
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid page-container bg-light">
+      <nav class="navbar navbar-expand-sm headercolour">
+        <div class="container">
+          <a class="navbar-brand" href="../Index/index_lgn.html">
+            <img
+              src="../../Pictures/Icons/pawprint.png"
+              width="30"
+              height="30"
+              class="d-inline-block align-top me-2"
+              alt=""
+            />
+            PetFinder</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav"></ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown mt-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../../Pictures/Icons/notification.png"
+                    width="35"
+                    height="35"
+                    class="d-inline-block ms-3"
+                    alt=""
+                  />
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../Applications/petapplication.html"
+                      >You've recieved a message!</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown mt-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../../Pictures/Icons/profile.png"
+                    width="40"
+                    height="40"
+                    class="d-inline-block p-0 m-0 ms-3"
+                    alt=""
+                  />
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../Account/accountupdatepageuser.html"
+                      >Account</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="../Pets/petcreation.html"
+                      >List your Pet</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-item active">
+          <img src="../../Pictures/dogs.jpeg" class="img-responsive" alt="" />
+          <div class="d-flex-columns carousel-caption justify-content-center">
+            <h1 class="display-1 fw-bold pb-3">Find your new best friend</h1>
+            <form
+              class="input-group w-50 min-vw-50 mx-auto"
+              action="search.html"
+              method="GET"
+            >
+              <input
+                name="search"
+                class="form-control p-2 px-3 form-control-lg"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <span class="input-group-append">
+                <button
+                  class="input-group-text"
+                  id="btnGroupAddon2"
+                  type="submit"
+                >
+                  <img
+                    src="../../Pictures/Icons/search.png"
+                    width="35"
+                    height="35"
+                    class="d-inline-block p-0 m-0"
+                    alt=""
+                  />
+                </button>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mb-2 pb-5 biggap">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header bg-light text-dark text-center pt-3">
+                <h1 class="fw-light">Search Results</h1>
+                <div class="row mt-3">
+                  <div class="col-md-4">
+                    <label for="filter">Filter by:</label>
+                    <select id="filter" class="form-select">
+                      <option value="cats">Cats</option>
+                      <option value="all">All</option>
+                      <!-- Add more filter options if needed -->
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" class="form-select">
+                      <option value="age">None</option>
+                      <option value="name">Name</option>
+                      <!-- Add more sorting options if needed -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat1_fixed.jpg"
+                          class="card-img-top"
+                          alt="Pet 1"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Fluffy Mc Fluff</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat2.jpg"
+                          class="card-img-top"
+                          alt="Pet 2"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Felix</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat1_fixed.jpg"
+                          class="card-img-top"
+                          alt="Pet 1"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Fluffy Mc Fluff</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat2.jpg"
+                          class="card-img-top"
+                          alt="Pet 2"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Felix</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat1_fixed.jpg"
+                          class="card-img-top"
+                          alt="Pet 1"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Fluffy Mc Fluff</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat2.jpg"
+                          class="card-img-top"
+                          alt="Pet 2"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Felix</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat1_fixed.jpg"
+                          class="card-img-top"
+                          alt="Pet 1"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Fluffy Mc Fluff</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat2.jpg"
+                          class="card-img-top"
+                          alt="Pet 2"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Felix</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body bg-light">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat1_fixed.jpg"
+                          class="card-img-top"
+                          alt="Pet 1"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Fluffy Mc Fluff</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat2.jpg"
+                          class="card-img-top"
+                          alt="Pet 2"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Felix</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat1_fixed.jpg"
+                          class="card-img-top"
+                          alt="Pet 1"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Fluffy Mc Fluff</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="../Pets/petdetail.html" class="card-link">
+                      <div class="card cardsearch my-2">
+                        <img
+                          src="../../Pictures/cat2.jpg"
+                          class="card-img-top"
+                          alt="Pet 2"
+                        />
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Felix</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="../Index/index_lgn.html" class="text-white"
+                    >Index after Login</a
+                  >
+                </li>
+                <li>
+                  <a href="../Index/index.html" class="text-white">Index </a>
+                </li>
+                <li>
+                  <a href="../Login/login.html" class="text-white">Login </a>
+                </li>
+                <li>
+                  <a href="../Login/login_err.html" class="text-white"
+                    >Login Error</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="../Login/signup.html" class="text-white">Sign Up</a>
+                </li>
+                <li>
+                  <a href="../Login/signup_err.html" class="text-white"
+                    >Sign Up Error</a
+                  >
+                </li>
+                <li>
+                  <a href="../Pets/petcreation.html" class="text-white"
+                    >Pets Creation</a
+                  >
+                </li>
+                <li>
+                  <a href="../Pets/petdetail.html" class="text-white"
+                    >Pets Detail</a
+                  >
+                </li>
+                <li>
+                  <a href="../Pets/petupdate.html" class="text-white"
+                    >Pets Update</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="../Search/search_filter_cats.html" class="text-white"
+                    >Search filter cats</a
+                  >
+                </li>
+                <li>
+                  <a href="../Search/search.html" class="text-white">Search</a>
+                </li>
+                <li>
+                  <a href="../Search/search_sort.html" class="text-white"
+                    >Search Sort</a
+                  >
+                </li>
+                <li>
+                  <a href="../Shelter/shelterdetail.html" class="text-white"
+                    >Shelter Detail</a
+                  >
+                </li>
+                <li>
+                  <a href="../Shelter/sheltermanagement.html" class="text-white"
+                    >Shelter Management</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="../Account/accountupdatepageshelter.html"
+                    class="text-white"
+                    >Update Shelter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Account/accountupdatepageuser.html"
+                    class="text-white"
+                    >Update User</a
+                  >
+                </li>
+                <li>
+                  <a href="../Applications/petadoption.html" class="text-white"
+                    >Pet Adoption</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Applications/petapplication.html"
+                    class="text-white"
+                    >Pet Application</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <h5>Contact Us</h5>
+              <p>
+                <i class="fas fa-phone-alt"></i> +1 647-923-3497 <br />
+                <i class="fas fa-envelope"></i> support@petadoption.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="text-center text-lg-start bg-dark text-light footer">
+        <div class="text-center p-3">© 2023 Copyright: Spencer Perkins</div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+  </body>
+</html>

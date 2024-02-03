@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!--
+  CSC309 P1
+  University of Toronto
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC309 P1 - Shelter Management Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid page-container bg-light">
+      <!-- TODO: complete me -->
+      <header id="header">
+        <nav class="navbar navbar-expand-sm headercolour">
+          <div class="container">
+            <a class="navbar-brand" href="../Index/index_lgn.html">
+              <img
+                src="../../Pictures/Icons/pawprint.png"
+                width="30"
+                height="30"
+                class="d-inline-block align-top me-2"
+                alt=""
+              />
+              PetFinder</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav"></ul>
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown mt-1">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="../../Pictures/Icons/notification.png"
+                      width="35"
+                      height="35"
+                      class="d-inline-block ms-3"
+                      alt=""
+                    />
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../Applications/petapplication.html"
+                        >You've recieved a message!</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mt-1">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="../../Pictures/Icons/profile.png"
+                      width="40"
+                      height="40"
+                      class="d-inline-block p-0 m-0 ms-3"
+                      alt=""
+                    />
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../Account/accountupdatepageuser.html"
+                        >Account</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../Shelter/sheltermanagement.html"
+                        >My Pets</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="index.html">Logout</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="container mt-5">
+          <!-- The tab bar for pet listing, analytics and pet creation -->
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-dark"
+                data-toggle="tab"
+                href="#listing"
+                >Listing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="../../Pages/Pets/petcreation.html" target="_blank">Add new pet</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-toggle="tab" href="#analytics"
+                >Analytics</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link text-dark"
+                data-toggle="tab"
+                href="#ManageApplications"
+                >Applications</a
+              >
+            </li>
+          </ul>
+
+          <div class="tab-content mt-2">
+            <div id="listing" class="container tab-pane active">
+              <!-- Search & Filter -->
+              <div class="d-flex justify-content-between mb-4">
+                <input
+                  type="text"
+                  class="form-control w-50"
+                  placeholder="Search pet..."
+                />
+                <select class="form-select w-25">
+                  <option selected>Filter by type</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <!-- ... other pet types ... -->
+                </select>
+              </div>
+
+  
+              <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img
+                        src="../../Pictures/cat1_fixed.jpg"
+                        class="card-img-top"
+                        alt="Pet Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Pet Name</h5>
+                        <p class="card-text">Pet description...</p>
+                        <hr />
+                        <strong>Status: </strong>
+                        <select class="form-select rounded-pill">
+                          <option value="available">Available</option>
+                          <option value="adopted">Adopted</option>
+                          <option value="pending">Pending</option>
+                          <option value="withdrawn">Withdrawn</option>
+                        </select>
+                        <small class="form-text text-muted"
+                          >Update the status of the pet.</small
+                        >
+                      </div>
+                      <div
+                        class="card-footer text-muted bg-light rounded-bottom"
+                      >
+                        <i class="fas fa-calendar-alt mr-2"></i> Published on:
+                        <span>2023-10-07</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img
+                        src="../../Pictures/cat1_fixed.jpg"
+                        class="card-img-top"
+                        alt="Pet Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Pet Name</h5>
+                        <p class="card-text">Pet description...</p>
+                        <hr />
+                        <strong>Status: </strong>
+                        <select class="form-select rounded-pill">
+                          <option value="available">Available</option>
+                          <option value="adopted">Adopted</option>
+                          <option value="pending">Pending</option>
+                          <option value="withdrawn">Withdrawn</option>
+                        </select>
+                        <small class="form-text text-muted"
+                          >Update the status of the pet.</small
+                        >
+                      </div>
+                      <div
+                        class="card-footer text-muted bg-light rounded-bottom"
+                      >
+                        <i class="fas fa-calendar-alt mr-2"></i> Published on:
+                        <span>2023-10-07</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img
+                        src="../../Pictures/cat1_fixed.jpg"
+                        class="card-img-top"
+                        alt="Pet Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Pet Name</h5>
+                        <p class="card-text">Pet description...</p>
+                        <hr />
+                        <strong>Status: </strong>
+                        <select class="form-select rounded-pill">
+                          <option value="available">Available</option>
+                          <option value="adopted">Adopted</option>
+                          <option value="pending">Pending</option>
+                          <option value="withdrawn">Withdrawn</option>
+                        </select>
+                        <small class="form-text text-muted"
+                          >Update the status of the pet.</small
+                        >
+                      </div>
+                      <div
+                        class="card-footer text-muted bg-light rounded-bottom"
+                      >
+                        <i class="fas fa-calendar-alt mr-2"></i> Published on:
+                        <span>2023-10-07</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img
+                        src="../../Pictures/cat1_fixed.jpg"
+                        class="card-img-top"
+                        alt="Pet Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Pet Name</h5>
+                        <p class="card-text">Pet description...</p>
+                        <hr />
+                        <strong>Status: </strong>
+                        <select class="form-select rounded-pill">
+                          <option value="available">Available</option>
+                          <option value="adopted">Adopted</option>
+                          <option value="pending">Pending</option>
+                          <option value="withdrawn">Withdrawn</option>
+                        </select>
+                        <small class="form-text text-muted"
+                          >Update the status of the pet.</small
+                        >
+                      </div>
+                      <div
+                        class="card-footer text-muted bg-light rounded-bottom"
+                      >
+                        <i class="fas fa-calendar-alt mr-2"></i> Published on:
+                        <span>2023-10-07</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                      <a class="page-link" href="#">Previous</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <!-- Analtics for extra feature? -->
+
+            <div id="analytics" class="container tab-pane fade">
+              <div class="card mb-5 mt-4">
+                <div class="card-header">Analytics</div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+
+                  <!-- Popularity by species/breed -->
+                  <h6>Popularity by Species</h6>
+                  <div class="mb-3">
+                    <label>German sheperds: 70%</label>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label>Pitbulls: 20%</label>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 20%"
+                        aria-valuenow="20"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label>Cats: 20%</label>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 20%"
+                        aria-valuenow="20"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- ... you can add more stats here ... -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Managing applications -->
+            <div id="ManageApplications" class="container tab-pane fade">
+              <h2>Manage Incoming Applications</h2>
+
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Applicant Name</th>
+                    <th>Pet Name</th>
+                    <th>Submission Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Example application row -->
+                  <tr>
+                    <td>John Doe</td>
+                    <td>mcFluffy</td>
+                    <td>2019-10-5</td>
+                    <td>
+                      <span class="badge bg-light text-dark">Pending</span>
+                    </td>
+                    <td>
+                      <a
+                        href="../../Pages/Applications/petapplication.html"
+                        class="btn btn-primary btn-sm"
+                        >View</a
+                      >
+                      <button class="btn btn-success btn-sm">Approve</button>
+                      <button class="btn btn-danger btn-sm">Reject</button>
+                      <button
+                        class="btn btn-info btn-sm"
+                        data-bs-toggle="modal"
+                        data-bs-target="#responseModal"
+                      >
+                        Respond
+                      </button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>Jane Doe</td>
+                    <td>Biscuit</td>
+                    <td>2019-10-5</td>
+                    <td>
+                      <span class="badge bg-light text-dark">Pending</span>
+                    </td>
+                    <td>
+                      <a
+                        href="../../Pages/Applications/petapplication.html"
+                        class="btn btn-primary btn-sm"
+                        >View</a
+                      >
+                      <button class="btn btn-success btn-sm">Approve</button>
+                      <button class="btn btn-danger btn-sm">Reject</button>
+                      <button
+                        class="btn btn-info btn-sm"
+                        data-bs-toggle="modal"
+                        data-bs-target="#responseModal"
+                      >
+                        Respond
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Repeat above row for each application, possibly using a loop if a backend is involved -->
+                </tbody>
+              </table>
+
+              <div
+                class="modal fade"
+                id="responseModal"
+                tabindex="-1"
+                aria-labelledby="responseModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="responseModalLabel">
+                        Send a Response
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="responseForm">
+                        <div class="mb-3">
+                          <label for="responseMessage" class="form-label"
+                            >Message</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="responseMessage"
+                            rows="4"
+                          ></textarea>
+                        </div>
+                        <!-- Add more fields if needed -->
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        form="responseForm"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="../Index/index_lgn.html" class="text-white"
+                    >Index after Login</a
+                  >
+                </li>
+                <li>
+                  <a href="../Index/index.html" class="text-white">Index </a>
+                </li>
+                <li>
+                  <a href="../Login/login.html" class="text-white">Login </a>
+                </li>
+                <li>
+                  <a href="../Login/login_err.html" class="text-white"
+                    >Login Error</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="../Login/signup.html" class="text-white">Sign Up</a>
+                </li>
+                <li>
+                  <a href="../Login/signup_err.html" class="text-white"
+                    >Sign Up Error</a
+                  >
+                </li>
+                <li>
+                  <a href="../Pets/petcreation.html" class="text-white"
+                    >Pets Creation</a
+                  >
+                </li>
+                <li>
+                  <a href="../Pets/petdetail.html" class="text-white"
+                    >Pets Detail</a
+                  >
+                </li>
+                <li>
+                  <a href="../Pets/petupdate.html" class="text-white"
+                    >Pets Update</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="../Search/search_filter_cats.html" class="text-white"
+                    >Search filter cats</a
+                  >
+                </li>
+                <li>
+                  <a href="../Search/search.html" class="text-white">Search</a>
+                </li>
+                <li>
+                  <a href="../Search/search_sort.html" class="text-white"
+                    >Search Sort</a
+                  >
+                </li>
+                <li>
+                  <a href="../Shelter/shelterdetail.html" class="text-white"
+                    >Shelter Detail</a
+                  >
+                </li>
+                <li>
+                  <a href="../Shelter/sheltermanagement.html" class="text-white"
+                    >Shelter Management</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="../Account/accountupdatepageshelter.html"
+                    class="text-white"
+                    >Update Shelter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Account/accountupdatepageuser.html"
+                    class="text-white"
+                    >Update User</a
+                  >
+                </li>
+                <li>
+                  <a href="../Applications/petadoption.html" class="text-white"
+                    >Pet Adoption</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../Applications/petapplication.html"
+                    class="text-white"
+                    >Pet Application</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <h5>Contact Us</h5>
+              <p>
+                <i class="fas fa-phone-alt"></i> +1 647-923-3497 <br />
+                <i class="fas fa-envelope"></i> support@petadoption.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="text-center text-lg-start bg-dark text-light footer">
+        <div class="text-center p-3">
+          Spencer Perkins, Nicholas Au, Adrian Hui
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+  </body>
+</html>

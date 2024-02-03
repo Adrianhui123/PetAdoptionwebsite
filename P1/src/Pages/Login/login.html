@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+  CSC309 P1
+  University of Toronto
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC309 P1 - Login Page</title>
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid page-container bg-light">
+      <!-- TODO: complete me -->
+      <nav class="navbar navbar-expand-sm headercolour">
+        <div class="container">
+          <a class="navbar-brand" href="../Index/index.html">
+            <img
+              src="../../Pictures/Icons/pawprint.png"
+              width="30"
+              height="30"
+              class="d-inline-block align-top me-2"
+              alt=""
+            />
+            PetFinder</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  type="button"
+                  class="btn btn-outline-dark px-3 py-2 m-2"
+                  href="login.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  type="button"
+                  class="btn btn-outline-dark px-3 py-2 m-2"
+                  href="signup.html"
+                  >Signup</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt-5 bg-light">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header bg-light text-dark text-left">
+                <h3>Login to PetFinder</h3>
+              </div>
+              <div class="card-body bg-light">
+                <form action="../Index/index_lgn.html" method="GET">
+                  <div class="form-group mt-0">
+                    <label for="email">Email:</label>
+                    <input
+                      type="email"
+                      class="form-control mt-1"
+                      id="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div class="form-group mt-4">
+                    <label for="password ">Password:</label>
+                    <input
+                      type="password"
+                      class="form-control mt-1"
+                      id="password"
+                      placeholder="Enter password"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark btn-block mt-4"
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="../Index/index_lgn.html" class="text-white">Index after Login</a></li>
+                <li><a href="../Index/index.html" class="text-white">Index </a></li>
+                <li><a href="../Login/login.html" class="text-white">Login </a></li>
+                <li><a href="../Login/login_err.html" class="text-white">Login Error</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li><a href="../Login/signup.html" class="text-white">Sign Up</a></li>
+                <li><a href="../Login/signup_err.html" class="text-white">Sign Up Error</a></li>
+                <li><a href="../Pets/petcreation.html" class="text-white">Pets Creation</a></li>
+                <li><a href="../Pets/petdetail.html" class="text-white">Pets Detail</a></li>
+                <li><a href="../Pets/petupdate.html" class="text-white">Pets Update</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li><a href="../Search/search_filter_cats.html" class="text-white">Search filter cats</a></li>
+                <li><a href="../Search/search.html" class="text-white">Search</a></li>
+                <li><a href="../Search/search_sort.html" class="text-white">Search Sort</a></li>
+                <li><a href="../Shelter/shelterdetail.html" class="text-white">Shelter Detail</a></li>
+                <li><a href="../Shelter/sheltermanagement.html" class="text-white">Shelter Management</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <ul class="list-unstyled">
+                <li><a href="../Account/accountupdatepageshelter.html" class="text-white">Update Shelter</a></li>
+                <li><a href="../Account/accountupdatepageuser.html" class="text-white">Update User</a></li>
+                <li><a href="../Applications/petadoption.html" class="text-white">Pet Adoption</a></li>
+                <li><a href="../Applications/petapplication.html" class="text-white">Pet Application</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <h5>Contact Us</h5>
+              <p>
+                <i class="fas fa-phone-alt"></i> +1 647-923-3497 <br />
+                <i class="fas fa-envelope"></i> support@petadoption.com
+              </p>
+            </div>
+          </div>
+        </div>
+      <footer class="text-center text-lg-start bg-dark text-light footer">
+        <div class="text-center p-3">
+          Spencer Perkins, Nicholas Au, Adrian Hui
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!-- all other page content
+        Initial view
+        With a filter turned on
+        With a sort option turned on
+        Should Display demo pet cards, when clicked on goes to a pet detail page, we can reuse the same detail page for all pets
+        When the shelters click on their own pets, it should show the edit pet page instead of the pet detail page.
+        -->
